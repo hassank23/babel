@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\CategoryVisit;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,11 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        $categories = ['news', 'photos-videos', 'economy', 'culture', 'sport'];
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        foreach ($categories as $category) {
+            CategoryVisit::create([
+                'category' => $category,
+                'visits' => 0,
+            ]);
+        }
     }
 }
