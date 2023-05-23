@@ -12,6 +12,8 @@ class CreateCategoryVisitsTable extends Migration
             $table->id();
             $table->string('category');
             $table->unsignedInteger('visits')->default(0);
+            $table->unsignedInteger('unique_visits')->default(0);
+            $table->ipAddress('ip_address')->nullable();
             $table->timestamps();
         });
     }

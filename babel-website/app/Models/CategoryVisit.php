@@ -12,5 +12,7 @@ class CategoryVisit extends Model
     protected $fillable = [
         'category',
         'visits',
+        'unique_visits',
+        'ip_address',
     ];
 }
