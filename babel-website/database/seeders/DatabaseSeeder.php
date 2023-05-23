@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\CategoryVisit;
 use App\Models\User;
-
+use App\Models\Artical;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CategoryVisit::create([
                 'category' => $category,
                 'visits' => 0,
+                'image' => '../../public/sport.jpg',
                 'unique_visits' => 0,
                 'ip_address' => null,
             ]);

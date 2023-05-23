@@ -10,10 +10,11 @@ class CreateCategoryVisitsTable extends Migration
     {
         Schema::create('category_visits', function (Blueprint $table) {
             $table->id();
-            $table->string('category');
+            $table->string('category')->unique();
             $table->unsignedInteger('visits')->default(0);
             $table->unsignedInteger('unique_visits')->default(0);
             $table->ipAddress('ip_address')->nullable();
+            $table->string('image')->nullable(); // Add the 'image' attribute
             $table->timestamps();
         });
     }

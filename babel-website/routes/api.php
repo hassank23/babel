@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryVisitController;
 use App\Http\Controllers\AggregatesController;
+use App\Http\Controllers\ArticleController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,3 +29,11 @@ Route::group([
 });
 Route::middleware('api')->post('/category-visit/{category}', [CategoryVisitController::class, 'store']);
 Route::middleware('api')->get('/homepage/aggregate/{period}', [AggregatesController::class, 'aggregate']);
+Route::middleware('api')->group(function () {
+    Route::get('/articles/{category}', [ArticleController::class, 'index']);
+    Route::get('articles/{article}', [ArticleController::class, 'show']);
+    Route::post('articles', [ArticleController::class, 'store']);
+    Route::put('articles/{article}', [ArticleController::class, 'update']);
+    Route::delete('articles/{article}', [ArticleController::class, 'destroy']);
+});
+ 
