@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\CategoryVisit;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -19,7 +19,14 @@ class DatabaseSeeder extends Seeder
             CategoryVisit::create([
                 'category' => $category,
                 'visits' => 0,
+                'unique_visits' => 0,
+                'ip_address' => null,
             ]);
         }
+        User::create([
+            'name' => 'admin',
+            'email' => 'admin@babel.com',
+            'password' => bcrypt('admin123'),
+        ]);
     }
 }
