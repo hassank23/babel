@@ -3,7 +3,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryVisitController;
-
+use App\Http\Controllers\AggregatesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,3 +26,4 @@ Route::group([
    
 });
 Route::middleware('api')->post('/category-visit/{category}', [CategoryVisitController::class, 'store']);
+Route::middleware('api')->get('/homepage/aggregate/{period}', [AggregatesController::class, 'aggregate']);
