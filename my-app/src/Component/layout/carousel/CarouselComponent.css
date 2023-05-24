@@ -1,0 +1,35 @@
+.carousel-image {
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+}
+
+.carousel-item-container {
+    position: relative;
+}
+
+.carousel-caption {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: right;
+    background-color: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+hr {
+    width: 20%;
+    display: inline-block;
+    text-align: left;
+}
+
+.rounded-b {
+    border-radius: 45%;
+}
+
+.carousel-indicators {
+    left: 0;
+    right: auto;
+    transform: none;
+}
