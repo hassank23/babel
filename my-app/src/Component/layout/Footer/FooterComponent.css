@@ -1,0 +1,87 @@
+.a {
+    font-size: 10px;
+    color: rgb(158, 157, 157)
+}
+
+.h {
+    font-size: 15px;
+}
+
+.gray-bg {
+    background-color: #e7e7e7ec;
+}
+
+.left-side {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.right-side {
+    padding-top: 20px;
+    display: block;
+}
+
+.red-background {
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+}
+
+.right-bottom {
+    padding-top: 20px;
+    display: block;
+}
+
+.form-area {
+    border-radius: 20px;
+}
+
+.txt-size {
+    font-size: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(9, 168, 129);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: white;
+}
+
+.icon-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (max-width: 750px) {
+    .left-side {
+        display: none;
+    }
+    .txt-size {
+        margin-bottom: 3%;
+    }
+}
+
+@media (max-width: 950px) {
+    .a {
+        font-size: 7.5px;
+    }
+}

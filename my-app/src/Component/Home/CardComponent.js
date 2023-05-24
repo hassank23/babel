@@ -4,14 +4,16 @@ import TopComponent from '../layout/header/TopComponent';
 import './CardComponent.css'; // Create a new CSS file for CardComponent styles
 import CopyrightComponent from '../layout/Copyright/CopyrightComponent';
 import CarouselComponent from '../layout/carousel/CarouselComponent';
+import FooterComponent from '../layout/Footer/FooterComponent';
 const CardComponent = () => {
-  const isSmallScreen = window.innerWidth <= 600; // Check if the screen size is small
 
   return (
-    <Card className={`m-5 ${isSmallScreen ? 'no-border' : ''}`}>
-      <Card.Body className="p-3 ">
+
+    <Card className="cad">
+      <Card.Body className="small-t">
         <TopComponent />
         <CarouselComponent/>
+        <FooterComponent/>
         <CopyrightComponent/>
       </Card.Body>
     </Card>
