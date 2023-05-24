@@ -43,7 +43,7 @@ const MyCarousel = () => {
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1 }}>
         <NavbarComponent />
       </div>
-      <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', zIndex: 0 }}>
+      <div style={{ maxWidth: '2000px', margin: '0 auto', position: 'relative', zIndex: 0 }}>
         <Carousel controls={window.innerWidth <= 768} interval={autoSlide ? 2000 : null}>
           {slides.map((slide, index) => (
             <Carousel.Item key={index} interval={autoSlide ? 2000 : null}>
@@ -52,7 +52,7 @@ const MyCarousel = () => {
                 src={slide.imageUrl}
                 alt={slide.title}
               />
-              <Carousel.Caption className="carousel-caption m-4   ">
+              <Carousel.Caption className="carousel-caption ">
                 <h3 className="title-h " >{slide.title}</h3>
                 <hr className="border border-Light border-1" />
                 <p className="title-t">{slide.text}</p>

@@ -1,4 +1,16 @@
 .logo-babel {
-    width: 30%;
+    width: 50%;
     height: auto;
+}
+
+.t {
+    font-size: 20px;
+    align-items: end;
+}
+
+@media screen and (max-width: 768px) {
+    .t {
+        align-items: center;
+        justify-content: center;
+    }
 }
