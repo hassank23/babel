@@ -14,10 +14,16 @@ class ArticleController extends Controller
         return response()->json(['articles' => $articles]);
     }
 
-    public function show(Article $article)
-    {
-        return response()->json($article);
+    public function show($articleId)
+{
+    $article = Article::find($articleId);
+
+    if (!$article) {
+        return response()->json(['message' => 'Article not found'], 404);
     }
+
+    return response()->json($article);
+}
 
     public function store(Request $request)
     {

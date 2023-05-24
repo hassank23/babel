@@ -31,7 +31,7 @@ Route::middleware('api')->post('/category-visit/{category}', [CategoryVisitContr
 Route::middleware('api')->get('/homepage/aggregate/{period}', [AggregatesController::class, 'aggregate']);
 Route::middleware('api')->group(function () {
     Route::get('/articles/{category}', [ArticleController::class, 'index']);
-    Route::get('articles/{article}', [ArticleController::class, 'show']);
+    Route::get('/articles/show/{article}', [ArticleController::class, 'show']);
     Route::post('articles', [ArticleController::class, 'store']);
     Route::put('articles/{article}', [ArticleController::class, 'update']);
     Route::delete('articles/{article}', [ArticleController::class, 'destroy']);
