@@ -1,0 +1,21 @@
+.linkText {
+    color: white !important;
+    font-weight: bold;
+}
+
+.vr {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-left: 2.5px solid rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+    .vr {
+        border-left: none;
+        border-top: 2.5px solid rgb(0, 0, 0);
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}
