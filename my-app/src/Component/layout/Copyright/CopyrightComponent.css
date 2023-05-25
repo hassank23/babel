@@ -1,18 +1,15 @@
     .responsive-text {
         font-size: 1vw;
-        /* Default text size based on viewport width */
     }
     
     @media (min-width: 576px) {
         .responsive-text {
             font-size: 0.5vw;
-            /* Text size for screens with a width of 576px or more */
         }
     }
     
     @media (min-width: 768px) {
         .responsive-text {
             font-size: 0.75vw;
-            /* Text size for screens with a width of 768px or more */
         }
     }

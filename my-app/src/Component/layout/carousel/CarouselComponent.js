@@ -57,7 +57,7 @@ const MyCarousel = () => {
                 <h3 className="title-h " >{slide.title}</h3>
                 <hr className="border border-Light border-1" />
                 <p className="title-t">{slide.text}</p>
-                <Button variant="danger" size="sm" className='rounded-b'>المزيد</Button>
+                <Button variant="danger rounded-pill" size="sm" className='rounded-b'>المزيد</Button>
               </Carousel.Caption>
             </Carousel.Item>
           ))}

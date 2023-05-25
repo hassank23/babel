@@ -25,10 +25,6 @@ hr {
     text-align: left;
 }
 
-.rounded-b {
-    border-radius: 45%;
-}
-
 .carousel-indicators {
     left: 0;
     right: auto;
