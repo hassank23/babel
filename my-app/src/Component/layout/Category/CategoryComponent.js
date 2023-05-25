@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
+import './CategoryComponent.css'
 import axios from 'axios';
 
 const CategoriesComponent = () => {
@@ -14,13 +15,13 @@ const CategoriesComponent = () => {
           axios
             .get('http://127.0.0.1:8000/api/homepage/aggregate/week')
             .then(secondResponse => {
-              setData(secondResponse.data.data);
+              setData(secondResponse.data.data.slice(0, 5));
             })
             .catch(error => {
               console.log('Error fetching data from second URL', error);
             });
         } else {
-          setData(response.data.data);
+          setData(response.data.data.slice(0, 5));
         }
       })
       .catch(error => {
@@ -44,9 +45,9 @@ const CategoriesComponent = () => {
                       style={{ height: '200px', objectFit: 'cover' }}
                     />
                     <Card.Body className="text-end">
-                      <Card.Title>{item.category}</Card.Title>
-                      <Button variant="danger" size="sm">
-                        Button
+                      <Card.Title className='tit'>{item.category}</Card.Title>
+                      <Button  className="more rounded-pill"size="sm">
+                      المزيد
                       </Button>
                     </Card.Body>
                   </Card>
@@ -61,12 +62,12 @@ const CategoriesComponent = () => {
               <Card.Img
                 variant="top"
                 src={data[0].image}
-                style={{ height: '75%', objectFit: 'cover' }}
+                style={{ height: '85%', objectFit: 'cover' }}
               />
               <Card.Body className="text-end">
-                <Card.Title>{data[0].category}</Card.Title>
-                <Button variant="danger" size="sm" className="rounded-pill">
-                  Small Button
+                <Card.Title className='tit'>{data[0].category}</Card.Title>
+                <Button  size="sm" className="rounded-pill more">
+                 المزيد
                 </Button>
               </Card.Body>
             </Card>

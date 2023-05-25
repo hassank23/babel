@@ -4,7 +4,7 @@ import axios from 'axios';
 import './NavbarComponent.css';
 
 const NavbarComponent = () => {
-  const categories = ["culture", "economy", "news", "photos-videos", "sport"];
+  const categories = ["اراء","فيديو و صور","ثقافة", "رياضة", "اقتصاد", "أخبار", "الرئيسية"];
 
   const handleClick = async (category) => {
     try {
@@ -15,7 +15,7 @@ const NavbarComponent = () => {
   };
 
   return (
-    <Navbar expand="md" variant="light" bg="none">
+    <Navbar expand="md" variant="dark" bg="none">
       <Container fluid className="navbar-container">
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-center">
