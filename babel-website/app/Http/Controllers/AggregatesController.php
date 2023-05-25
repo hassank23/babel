@@ -9,20 +9,22 @@ use Illuminate\Http\Request;
 class AggregatesController extends Controller
 {
     public function aggregate(Request $request, $period)
-    {
-        $startDateTime = $this->getStartDateTime($period);
-        $endDateTime = Carbon::now();
+{
+    $startDateTime = $this->getStartDateTime($period);
+    $endDateTime = Carbon::now();
+    
+    $aggregates = CategoryVisit::select('category', 'image')  // include 'image' field
+        ->selectRaw('SUM(visits) as total_visits')
+        ->selectRaw('SUM(unique_visits) as unique_visits')
+        ->whereBetween('updated_at', [$startDateTime, $endDateTime])
+        ->groupBy('category', 'image')  // group by 'image' as well
+        ->orderByDesc('unique_visits')
+        ->get();
+    
+    return response()->json(['data' => $aggregates]);
+}
 
-        $aggregates = CategoryVisit::select('category')
-            ->selectRaw('SUM(visits) as total_visits')
-            ->selectRaw('SUM(unique_visits) as unique_visits')
-            ->whereBetween('created_at', [$startDateTime, $endDateTime])
-            ->groupBy('category')
-            ->orderByDesc('total_visits')
-            ->get();
-
-        return response()->json(['data' => $aggregates]);
-    }
+    
 
     private function getStartDateTime($period)
     {

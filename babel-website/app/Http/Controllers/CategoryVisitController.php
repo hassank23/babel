@@ -20,6 +20,7 @@ class CategoryVisitController extends Controller
             if (!$categoryVisit->ip_address || $categoryVisit->ip_address !== $request->ip()) {
                 $categoryVisit->increment('unique_visits');
                 $categoryVisit->ip_address = $request->ip();
+                $categoryVisit->image = $imageURL;
                 $categoryVisit->save();
             }
         } else {
@@ -29,6 +30,7 @@ class CategoryVisitController extends Controller
                 'visits' => 1,
                 'unique_visits' => 1,
                 'ip_address' => $request->ip(),
+                'image' => $imageURL,
             ]);
         }
 
