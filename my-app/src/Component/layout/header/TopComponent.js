@@ -1,8 +1,9 @@
 import React from 'react';
-import { Col, Row ,} from 'react-bootstrap';
+import { Col, Container, Row ,} from 'react-bootstrap';
 import logo from './babel.png';
 import './TopComponent.css'
 const TopComponent = () => (
+    <Container>
     <Row>
         <Col className="d-flex t " xs={12} md={4}>
             <a href="facebook.com"  >تسجيل دخول</a>
@@ -14,6 +15,7 @@ const TopComponent = () => (
            
         </Col>
     </Row>
+    </Container>
 );
 
 export default TopComponent;

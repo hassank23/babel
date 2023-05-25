@@ -6,8 +6,9 @@ import './FooterComponent.css';
 
 const FooterComponent = () => {
   return (
-    <div className="gray-bg">
+
       <Container>
+            <div className="gray-bg">
         <Row>
           <Col xs={12} md={2} className='left-side'>
             <div className="d-flex flex-column align-items-center justify-content-center">
@@ -33,7 +34,10 @@ const FooterComponent = () => {
               <a className="a" href="#1">عليك ان تتحقق اولا أن</a>
             </div>
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={1} className='left-side'>
+            
+          </Col>
+          <Col xs={12} md={5}>
             <Row>
             <Col xs={12} md={6} className='right-side'></Col>
               <Col xs={12} md={6} className='right-side'>
@@ -45,8 +49,8 @@ const FooterComponent = () => {
             <Row>
               <Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} className="d-flex flex-column align-items-end justify-content-end right-bottom ">
                 <InputGroup>
-                  <Form.Control aria-label="الاشتراك" className='form-area txt-size' />
-                  <InputGroup.Text className="red-background txt-size ">
+                  <Form.Control aria-label="الاشتراك" className='form-area txt-size  'dir="rtl" />
+                  <InputGroup.Text className="red-background txt-size  "  dir="rtl">
                     الاشتراك
                   </InputGroup.Text>
                 </InputGroup>
@@ -67,8 +71,9 @@ const FooterComponent = () => {
             </Row>
           </Col>
         </Row>
+        </div>
       </Container>
-    </div>
+
   );
 };
 

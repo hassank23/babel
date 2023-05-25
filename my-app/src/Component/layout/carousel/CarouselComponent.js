@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import axios from 'axios';
 import NavbarComponent from '../Navbar/NavbarComponent';
 import './CarouselComponent.css';
-import { Button } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 
 const MyCarousel = () => {
   const [slides, setSlides] = useState([]);
@@ -39,6 +39,7 @@ const MyCarousel = () => {
   }, []);
 
   return (
+    <Container>
     <div style={{ position: 'relative' }}>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: 1 }}>
         <NavbarComponent />
@@ -63,6 +64,7 @@ const MyCarousel = () => {
         </Carousel>
       </div>
     </div>
+    </Container>
   );
 }
 
