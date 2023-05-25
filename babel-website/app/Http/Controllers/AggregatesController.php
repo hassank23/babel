@@ -13,11 +13,11 @@ class AggregatesController extends Controller
     $startDateTime = $this->getStartDateTime($period);
     $endDateTime = Carbon::now();
     
-    $aggregates = CategoryVisit::select('category', 'image')  // include 'image' field
+    $aggregates = CategoryVisit::select('category', 'image')  
         ->selectRaw('SUM(visits) as total_visits')
         ->selectRaw('SUM(unique_visits) as unique_visits')
         ->whereBetween('updated_at', [$startDateTime, $endDateTime])
-        ->groupBy('category', 'image')  // group by 'image' as well
+        ->groupBy('category', 'image')  
         ->orderByDesc('unique_visits')
         ->get();
     

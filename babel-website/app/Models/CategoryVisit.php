@@ -13,6 +13,6 @@ class CategoryVisit extends Model
         'visits',
         'unique_visits',
         'ip_address',
-        'image', // Add the 'image' attribute to the $fillable array
+        'image', 
     ];
 }
