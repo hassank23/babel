@@ -65,9 +65,18 @@ const MostreadComponent = () => {
               </div>
             ))}
           </Col>
-          <Col sm={6}>
-            <Image src="https://images.pexels.com/photos/684363/pexels-photo-684363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Your Image" className="right-column-image" />
-          </Col>
+          <Col sm={1}></Col>
+          <Col sm={5}>
+  <div className="card-d">
+    <div className="card-image-d">
+      <Image
+        src="https://images.pexels.com/photos/684363/pexels-photo-684363.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Your Image"
+        className="image-d"
+      />
+    </div>
+  </div>
+</Col>
         </Row>
       </Container>
     </div>
