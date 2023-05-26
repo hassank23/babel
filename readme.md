@@ -18,10 +18,12 @@ To run the Laravel backend, follow these steps:
 1. Navigate to the `babel-website` directory.
 2. Install the dependencies by running `composer install`.
 3. Copy the `.env.example` file to `.env` and update the environment variables as needed.
-4. Generate an application key by running `php artisan key:generate`.
-5. configure database
+4. Configure database
+5. Generate an application key by running `php artisan key:generate`.
 6. Run the database migrations by running `php artisan migrate`.
-7. Start the development server by running `php artisan serve`.
+7. Seed the data by running `php artisan DB:seed`
+8. generate a jwt token using `php artisan jwt:secret`
+9. Start the development server by running `php artisan serve`.
 
 The Laravel backend should now be running on <http://localhost:8000>.
 
